@@ -127,6 +127,7 @@ Type:
 5. refactor: 重构
 6. test: 增加测试
 7. chore: 构建过程或辅助工具的变动
+8. wip: work in progress
 
 Scope:（选填）
 
