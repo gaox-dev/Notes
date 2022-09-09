@@ -471,6 +471,7 @@ HostName github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/github_id_rsa
 ```
+> 完成后必须 先添加私钥`ssh-add ~/.ssh/id_rsa`
 
 > 用ssh命令分别测试
 
