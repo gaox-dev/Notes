@@ -9,9 +9,14 @@ tags: git
 # 一、process
 
 ```sh
-git clone -b branchName gitAddress  #克隆指定分支branchName
+#克隆指定分支branchName
+git clone -b branchName gitAddress  
 
-git push <远程主机名> <本地分支名>:<远程分支名> #推送到指定远程分支
+#推送到指定远程分支
+git push <远程主机名> <本地分支名>:<远程分支名> 
+  
+#推送新的远程分支
+git push --set-upstream origin gaox    
 ```
 
 
@@ -51,7 +56,6 @@ git push								# 推送代码
 **补充：没有Origin Master分支权限时**
 
 ```sh
-git push --set-upstream origin gaox # 设置新的远程分支
 git branch --set-upstream-to=origin/<branch> # 修改远程上传分支
 ```
 
