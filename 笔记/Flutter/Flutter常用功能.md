@@ -85,3 +85,59 @@ SystemChannels.textInput.invokeMethod('TextInput.hide');
 flutter build apk --build-name=1.0.3 --build-number=3
 ```
 
+
+
+##  8.适配刘海屏
+
+```dart
+final double safeAreaTopPadding = MediaQuery.of(context).padding.top;
+
+final double safeAreaBottomPadding = MediaQuery.of(context).padding.bottom;
+```
+
+> 或者使用SafeArea widget。
+
+
+
+## 9.bash_profile 环境变量配置
+
+```sh
+export PATH=${PATH}:${ANDROID_HOME}/tools
+
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+export FLUTTER_ROOT=/Users/gaoxiong/flutter
+
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+export PATH=$PATH:/User/gaoxiong/gradle/gradle-6.9/bin
+
+export PATH=/Users/gaoxiong/flutter/bin:$PATH
+```
+
+
+
+## 10.**判断是否视频URL正则**
+
+`"^(https|http|ftp|rtsp|mms)?:\/\/.+\.(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$"`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
