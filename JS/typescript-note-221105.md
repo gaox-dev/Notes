@@ -63,3 +63,31 @@ interface pointer3d extends pointer2d {
 }
 ```
 
+
+
+# 模块寻找
+
+我们知道引用 JS 文件，需要为它写 d.ts 文件，此时拥有 d.ts 的文件，我们 可以把它看做 js + d.ts = .ts 
+
+在 ts2.0 版本之后，我们直接直接通过 npm install @types/xxx 安装 d.ts 文件
+
+```sh
+mkdir ts-modules
+cd ts-modules
+tsc --init   //生成tsconfig.json
+npm init -y  //生成package.json
+npm install jquery @types/jquery -S
+```
+
+在`tsconfig.json` 文件内加上一行
+
+```json
+    "outDir": "./dist"
+```
+
+在命令行执行
+
+```sh
+tsc    //ts文件compile
+```
+
