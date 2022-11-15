@@ -440,54 +440,7 @@ git log -G
 
 
 
-# 十五、Git配置多个SSH-Key
-
-> 背景
->
-> 当有多个git账号时，比如：
->
-> a. 一个gitee，用于公司内部的工作开发；
-> b. 一个github，用于自己进行一些开发活动；
-
-+ 解决方法
-
-```sh
-#生成一个公司用的SSH-Key
-ssh-keygen -t rsa -C  "gaoxiong@cestc.cn" -f ~/.ssh/cestc_id_rsa
-
-#生成一个github用的SSH-Key
-ssh-keygen -t rsa -C  "304148116@qq.com" -f ~/.ssh/github_id_rsa
-
-```
-
-在 ~/.ssh 目录下新建一个config文件，添加如下内容（其中Host和HostName填写git服务器的域名，IdentityFile指定私钥的路径）
-
-```sh
-# cestc
-Host cestc.cn
-HostName code.cestc.cn
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/cestc_id_rsa
-
-# github
-Host github.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/github_id_rsa
-```
-> 完成后必须 先添加私钥`ssh-add ~/.ssh/id_rsa`
-
-> 用ssh命令分别测试
-
-```sh
-ssh -T git@code.cestc.cn
-
-ssh -T git@github.com
-```
-
-
-
-# 十六、其他情况
+# 十五、其他情况
 
 ## 1、直接pull主机的分支，覆盖本地
 
