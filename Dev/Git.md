@@ -226,12 +226,12 @@ git reset --mixed origin/master  #放弃本地修改，添加到workspace
 
 ```sh
 git branch -a  								 #查看所有分支(gba)
-git push origin -d ios   #删除远程分支ios
+git push origin -d ios         #删除远程分支ios
 git branch -D ios        			 #删除本地分支ios (gbd ios)
 git checkout -b hotfix				 #新建并切换到新分支hotfix(gcb hotfix)
 git switch -c hotfix						
-git push origin BranchName     #推送远程新分支
-git push -f origin localBranch #推送本地分支到远程
+git push origin <BranchName>     #推送本地分支，远程新分支或指定分支
+git push -f origin <BranchName>  #强推本地分支
 git branch --set-upstream-to=origin/BranchName #修改上传地址
 git branch --unset-upstream    # 去掉上传地址
 git branch -m 原分支名 新分支名   # 如果对于分支不是当前分支，可以使用下面代码
