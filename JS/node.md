@@ -55,3 +55,13 @@ $ n rm xx.xx.x
 $ n use xx.xx.x a.js
 ```
 
+
+
+# 四、常见问题
+
+## 4.1 [node: --openssl-legacy-provider is not allowed in NODE_OPTIONS](https://stackoverflow.com/questions/72866798/node-openssl-legacy-provider-is-not-allowed-in-node-options)
+
+```
+unset NODE_OPTIONS
+```
+
